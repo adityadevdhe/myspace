@@ -23,6 +23,8 @@ bool isSafe(int** arr,int x,int y,int n)
         row--;
         col--;
     }
+    row=x;
+    col=y;
     while(row>=0 && col<n)
     {
         if(arr[row][col]==1)
@@ -71,7 +73,11 @@ int main()
             arr[i][j]=0;
         }
     }
-    if(nqueen(arr,0,n))
+    int a;
+    cout<<"Enter the column number positon for first queen";
+    cin>>a;
+    arr[0][a-1]=1;
+    if(nqueen(arr,1,n))
     {
         for(int i=0;i<n;++i)
         {
@@ -83,5 +89,6 @@ int main()
         }
     }
 }
+
 
 
