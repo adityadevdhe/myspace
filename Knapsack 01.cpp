@@ -38,6 +38,6 @@ int main()
             }
         }
     }
-    cout<<dp[n-1][w-1];
+    cout<<dp[n][w];
 }
 
